@@ -12,7 +12,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-primary font-medium mb-3 tracking-wider uppercase text-sm">Welcome</p>
+          <p className="text-primary font-medium mb-3 tracking-wider uppercase text-sm">Welcome, I'm</p>
           <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground leading-tight mb-4">
             <Typewriter
               onInit={(typewriter) => {
