@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, ArrowDown } from "lucide-react";
+import Typewriter from "typewriter-effect";
 import profileImg from "@/assets/profile-hero.jpg";
 
 const HeroSection = () => {
@@ -11,9 +12,20 @@ const HeroSection = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="text-primary font-medium mb-3 tracking-wider uppercase text-sm">Hello, I'm</p>
+          <p className="text-primary font-medium mb-3 tracking-wider uppercase text-sm">Welcome</p>
           <h1 className="text-4xl md:text-6xl font-display font-bold text-foreground leading-tight mb-4">
-            Alex <span className="text-gradient">Johnson</span>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString('Alex ')
+                  .typeString('<span class="text-gradient">Johnson</span>')
+                  .start();
+              }}
+              options={{
+                cursor: '|',
+                delay: 80,
+              }}
+            />
           </h1>
           <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-display font-light">
             Data Scientist & ML Engineer
