@@ -35,15 +35,16 @@ const AboutSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <p className="text-muted-foreground leading-relaxed mb-6">
-              I'm a passionate Data Scientist with expertise in building end-to-end machine learning 
-              pipelines, statistical modeling, and turning raw data into compelling stories. I hold a 
-              Master's in Data Science and have worked with Fortune 500 companies to optimize their 
-              data strategies.
+            My journey with Python started over a year ago when I began learning how to work with APIs and collaborated with a team to build a weather application.
+             This experience strengthened my communication skills and showed me the value of collaboration when solving technical problems.
+            <p className="text-muted-foreground leading-relaxed mb-6 mt-6">
+             My interest in data started in high school when I created my first graphs in Excel using my own collected data.
+              That early curiosity eventually grew into a passion for data science and understanding how data can reveal trends and support better decision-making.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              When I'm not crunching numbers, you'll find me contributing to open-source projects, 
-              writing technical blogs, and mentoring aspiring data scientists. I believe in the power 
-              of data to transform industries and improve lives.
+               <p className="text-muted-foreground leading-relaxed">
+              In my current learning journey, I've worked on projects that involve generating dummy datasets for businesses to analyze trends and predict outcomes, as well as exploring retail sales data to help project delivery revenue for the upcoming year.
+Outside of tech, I enjoy running and meditation—habits that help me stay focused, disciplined, and attentive to detail, qualities that are just as important when working with data.
+            </p>
             </p>
           </motion.div>
 
@@ -56,9 +57,9 @@ const AboutSection = () => {
             {skills.map((skill, i) => (
               <div
                 key={skill.label}
-                className="glass-card p-5 flex flex-col items-center gap-3 text-center hover:glow-teal transition-shadow duration-300"
+                className="glass-card pt-5 flex flex-col items-center gap-3 text-center hover:glow-teal transition-shadow duration-300"
               >
-                <skill.icon className="w-8 h-8 text-primary" />
+                <skill.icon className="w-12 h-12 text-primary" />
                 <span className="text-sm font-medium text-foreground">{skill.label}</span>
               </div>
             ))}

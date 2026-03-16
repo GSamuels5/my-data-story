@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, ArrowDown } from "lucide-react";
 import Typewriter from "typewriter-effect";
-import profileImg from "@/assets/profile-hero.jpg";
+import profileImg from "@/assets/new_profile.png";
 
 const HeroSection = () => {
   return (
@@ -17,8 +17,8 @@ const HeroSection = () => {
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .typeString('Alex ')
-                  .typeString('<span class="text-gradient">Johnson</span>')
+                  .typeString('Ghamzah ')
+                  .typeString('<span class="text-gradient">Samuels</span>')
                   .start();
               }}
               options={{
@@ -28,11 +28,11 @@ const HeroSection = () => {
             />
           </h1>
           <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-display font-light">
-            Data Scientist & ML Engineer
+            Data Scientist 
           </h2>
           <p className="text-muted-foreground leading-relaxed max-w-lg mb-8">
-            Transforming complex data into actionable insights. Specializing in machine learning, 
-            deep learning, and data visualization with 5+ years of experience driving data-driven decisions.
+            I'm an aspiring Data Scientist and data storyteller who enjoys turning raw data into insights that help businesses make better decisions.
+             With over 6 months of hands-on learning and project experience, I focus on data analysis, machine learning, and visualization.
           </p>
           <div className="flex gap-4 items-center">
             <a
@@ -61,7 +61,7 @@ const HeroSection = () => {
               <img src={profileImg} alt="Profile" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-20 h-20 gradient-teal rounded-xl flex items-center justify-center animate-float">
-              <span className="text-primary-foreground font-display font-bold text-lg">5+</span>
+              <span className="text-primary-foreground font-display font-bold text-lg">1+</span>
             </div>
           </div>
         </motion.div>
