@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, BarChart3 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from '@/assets/G_logo_2.png'
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -17,8 +18,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 nav-bg border-b border-border/30">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#home" className="flex items-center gap-2 text-foreground font-display font-bold text-xl">
-          <BarChart3 className="w-7 h-7 text-primary" />
-          <span>DataSci<span className="text-gradient">Portfolio</span></span>
+         <img src={Logo} alt="logo" className=" h-9 rounded-full " />
+          
         </a>
 
         {/* Desktop */}

@@ -2,9 +2,9 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
 import projectMl from "@/assets/project-ml.jpg";
-import projectAnalytics from "@/assets/project-analytics.jpg";
+import projectAnalytics from "@/assets/Screenshot 2026-02-13 145138.png";
 import projectNlp from "@/assets/project-nlp.jpg";
-import projectCv from "@/assets/project-cv.jpg";
+import projectCv from "@/assets/Screenshot 2024-07-17 091923.png";
 
 const projects = [
   {
@@ -15,11 +15,11 @@ const projects = [
     github: "https://github.com",
   },
   {
-    title: "Real-Time Analytics Dashboard",
-    description: "Interactive dashboard for monitoring KPIs with live data streaming, built with Python and Plotly Dash.",
+    title: "Data-Driven Pricing Strategy (SQL & Power BI)",
+    description: "A SQL and Power BI project analysing price elasticity and its impact on demand, revenue, and profitability to support strategic pricing decisions.",
     image: projectAnalytics,
-    tags: ["Python", "Plotly", "SQL"],
-    github: "https://github.com",
+    tags: ["Python", "Power BI", "SQL"],
+    github: "https://github.com/GSamuels5/Toman_bike_Project.git",
   },
   {
     title: "NLP Sentiment Analyzer",
@@ -29,11 +29,11 @@ const projects = [
     github: "https://github.com",
   },
   {
-    title: "Computer Vision Detection",
-    description: "Real-time object detection system using YOLOv8 for automated quality inspection in manufacturing.",
+    title: "Weather website ",
+    description: "This team project was created using Python and the Flask framework.",
     image: projectCv,
-    tags: ["Computer Vision", "YOLO", "OpenCV"],
-    github: "https://github.com",
+    tags: ["Python", "Flask", "HTML/CSS"],
+    github: "https://github.com/GSamuels5/Weather_report.git",
   },
 ];
 

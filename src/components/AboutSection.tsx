@@ -59,7 +59,7 @@ Outside of tech, I enjoy running and meditation—habits that help me stay focus
                 key={skill.label}
                 className="glass-card pt-5 flex flex-col items-center gap-3 text-center hover:glow-teal transition-shadow duration-300"
               >
-                <skill.icon className="w-12 h-12 text-primary" />
+                <skill.icon className="w-8 h-8 text-primary" />
                 <span className="text-sm font-medium text-foreground">{skill.label}</span>
               </div>
             ))}

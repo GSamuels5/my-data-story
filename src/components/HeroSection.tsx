@@ -28,10 +28,10 @@ const HeroSection = () => {
             />
           </h1>
           <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-display font-light">
-            Data Scientist 
+            Data Scientist / Full Stack Developer
           </h2>
           <p className="text-muted-foreground leading-relaxed max-w-lg mb-8">
-            I'm an aspiring Data Scientist and data storyteller who enjoys turning raw data into insights that help businesses make better decisions.
+            I'm a data storyteller who enjoys turning raw data into insights that help businesses make better decisions.
              With over 6 months of hands-on learning and project experience, I focus on data analysis, machine learning, and visualization.
           </p>
           <div className="flex gap-4 items-center">
