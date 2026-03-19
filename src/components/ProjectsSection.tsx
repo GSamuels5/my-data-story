@@ -3,17 +3,11 @@ import { useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
 import projectMl from "@/assets/project-ml.jpg";
 import projectAnalytics from "@/assets/Screenshot 2026-02-13 145138.png";
-import projectNlp from "@/assets/project-nlp.jpg";
+import projectPortfolio from "@/assets/Screenshot 2026-03-19 122029.png";
 import projectCv from "@/assets/Screenshot 2024-07-17 091923.png";
 
 const projects = [
-  {
-    title: "Neural Network Classifier",
-    description: "Deep learning model for image classification achieving 97% accuracy on custom dataset using TensorFlow and Keras.",
-    image: projectMl,
-    tags: ["Python", "TensorFlow", "Deep Learning"],
-    github: "https://github.com",
-  },
+
   {
     title: "Data-Driven Pricing Strategy (SQL & Power BI)",
     description: "A SQL and Power BI project analysing price elasticity and its impact on demand, revenue, and profitability to support strategic pricing decisions.",
@@ -22,11 +16,11 @@ const projects = [
     github: "https://github.com/GSamuels5/Toman_bike_Project.git",
   },
   {
-    title: "NLP Sentiment Analyzer",
-    description: "Sentiment analysis pipeline processing 10K+ reviews/min using transformers and custom fine-tuned BERT models.",
-    image: projectNlp,
-    tags: ["NLP", "BERT", "PyTorch"],
-    github: "https://github.com",
+    title: "React Portfolio Website",
+    description: "A responsive portfolio website built with React and Tailwind CSS, showcasing my projects and skills.",
+    image: projectPortfolio,
+    tags: ["React", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/GSamuels5/Ghamzah_Samuels_portfolio.git",
   },
   {
     title: "Weather website ",
@@ -68,7 +62,7 @@ const ProjectsSection = () => {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-fit group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">

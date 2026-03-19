@@ -6,6 +6,7 @@ import Logo from '@/assets/G_logo_2.png'
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },

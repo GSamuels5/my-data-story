@@ -7,7 +7,7 @@ const skills = [
   { icon: Brain, label: "Machine Learning" },
   { icon: Database, label: "Data Engineering" },
   { icon: LineChart, label: "Data Visualization" },
-  { icon: Code2, label: "Python / R" },
+  { icon: Code2, label: "Python " },
 ];
 
 const AboutSection = () => {
@@ -59,7 +59,7 @@ Outside of tech, I enjoy running and meditation—habits that help me stay focus
                 key={skill.label}
                 className="glass-card pt-5 flex flex-col items-center gap-3 text-center hover:glow-teal transition-shadow duration-300"
               >
-                <skill.icon className="w-8 h-8 text-primary" />
+                <skill.icon className="w-11 h-11 text-primary" />
                 <span className="text-sm font-medium text-foreground">{skill.label}</span>
               </div>
             ))}
