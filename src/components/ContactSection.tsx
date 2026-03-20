@@ -1,16 +1,35 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, Mail, User, MessageSquare } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setLoading(true);
+
+    const form = e.target as HTMLFormElement;
+    try {
+      await emailjs.sendForm(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        form,
+        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      );
+      form.reset();
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 3000);
+    } catch (error) {
+      console.error('Email send failed:', error);
+      alert('Failed to send message. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -38,6 +57,7 @@ const ContactSection = () => {
             <User className="absolute left-3 top-3.5 w-4 h-4 text-muted-foreground" />
             <input
               type="text"
+              name="from_name"
               placeholder="Your Name"
               required
               className="w-full bg-background/50 border border-border rounded-lg py-3 pl-10 pr-4 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
@@ -47,6 +67,7 @@ const ContactSection = () => {
             <Mail className="absolute left-3 top-3.5 w-4 h-4 text-muted-foreground" />
             <input
               type="email"
+              name="from_email"
               placeholder="Your Email"
               required
               className="w-full bg-background/50 border border-border rounded-lg py-3 pl-10 pr-4 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
@@ -56,6 +77,7 @@ const ContactSection = () => {
             <MessageSquare className="absolute left-3 top-3.5 w-4 h-4 text-muted-foreground" />
             <textarea
               rows={5}
+              name="message"
               placeholder="Your Message"
               required
               className="w-full bg-background/50 border border-border rounded-lg py-3 pl-10 pr-4 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition resize-none"
@@ -65,7 +87,7 @@ const ContactSection = () => {
             type="submit"
             className="w-full gradient-teal text-primary-foreground font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
           >
-            {submitted ? "Message Sent! ✓" : (<>Send Message <Send className="w-4 h-4" /></>)}
+            {loading ? "Sending..." : submitted ? "Message Sent! ✓" : (<>Send Message <Send className="w-4 h-4" /></>)}
           </button>
         </motion.form>
       </div>

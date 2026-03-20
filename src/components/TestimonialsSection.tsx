@@ -4,30 +4,21 @@ import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Chen",
-    role: "VP of Engineering, TechCorp",
-    text: "Alex's data insights transformed our product strategy. The ML models they built reduced churn by 35% in the first quarter.",
+    name: "Razien Mackenzie",
+    role: "QA Automation & UAT Specialist ",
+    text: "Ghamzah has been an amazing help in my team. He's always finding solutions to even the most challenging problems. He is a very kind person, yet he takes his work extremely seriously. He is definitely my go-to guy in a crunch, so I'm sure he'll make a valuable addition to your team.",
   },
   {
-    name: "Michael Rivera",
-    role: "CEO, DataFlow Inc.",
-    text: "Exceptional analytical skills combined with the ability to communicate complex findings to non-technical stakeholders. A rare talent.",
+    name: "Joel Mukanya",
+    role: "CEO & Founder at JT Devs",
+    text: "Ghamzah is a creative, and well-behaved individual who always prioritizes his work. He excels in collaborating with others and has gained proficiency in HTML5, CSS, and Bootstrap. Including Git and GitHub.",
   },
   {
-    name: "Emily Thompson",
-    role: "Lead Data Scientist, QuantumAI",
-    text: "Working alongside Alex was a game-changer. Their NLP pipeline processed millions of documents and saved us hundreds of hours.",
+    name: "Rezaar Osman",
+    role: "Intermediate Developer @ FutureRent",
+    text: "Ghamzah Samuels patience is immeasurable. He has persistent composure in the face of stress. His efficient and has meticulous work ethic as if he was born to be an engineer. Nothing, in my opinion, could prevent him from being modest. I would expect and be proud to see him in high places someday.",
   },
-  {
-    name: "David Park",
-    role: "CTO, InsightHub",
-    text: "Alex brought structure and innovation to our data team. Their dashboard solutions are still the gold standard we use today.",
-  },
-  {
-    name: "Lisa Wang",
-    role: "Director of Analytics, CloudScale",
-    text: "The predictive models Alex developed helped us forecast demand with 94% accuracy, significantly reducing waste.",
-  },
+ 
 ];
 
 const TestimonialsSection = () => {
