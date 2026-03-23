@@ -1,31 +1,30 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
-import projectMl from "@/assets/project-ml.jpg";
-import projectAnalytics from "@/assets/powerbi.png";
-import projectPortfolio from "@/assets/portfoliotech.png";
-import projectCv from "@/assets/weather.png";
+import PowerBi from "@/assets/powerbi.png";
+import PortfolioProj from "@/assets/portfoliotech.png";
+import WeatherApp from "@/assets/weatherapp.png";
 
 const projects = [
 
   {
     title: "Data-Driven Pricing Strategy (SQL & Power BI)",
     description: "A SQL and Power BI project analysing price elasticity and its impact on demand, revenue, and profitability to support strategic pricing decisions.",
-    image: projectAnalytics,
+    image: PowerBi,
     tags: ["Python", "Power BI", "SQL"],
     github: "https://github.com/GSamuels5/Toman_bike_Project.git",
   },
   {
     title: "React Portfolio Website",
     description: "A responsive portfolio website built with React and Tailwind CSS, showcasing my projects and skills.",
-    image: projectPortfolio,
+    image: PortfolioProj,
     tags: ["React", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/GSamuels5/Ghamzah_Samuels_portfolio.git",
   },
   {
     title: "Weather website ",
     description: "This team project was created using Python and the Flask framework.",
-    image: projectCv,
+    image: WeatherApp,
     tags: ["Python", "Flask", "HTML/CSS"],
     github: "https://github.com/GSamuels5/Weather_report.git",
   },
