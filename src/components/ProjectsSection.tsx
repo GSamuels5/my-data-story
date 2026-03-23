@@ -2,9 +2,9 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Github, ExternalLink } from "lucide-react";
 import projectMl from "@/assets/project-ml.jpg";
-import projectAnalytics from "@/assets/Screenshot 2026-02-13 145138.png";
-import projectPortfolio from "@/assets/Screenshot 2026-03-19 122029.png";
-import projectCv from "@/assets/Screenshot 2024-07-17 091923.png";
+import projectAnalytics from "@/assets/powerbi.png";
+import projectPortfolio from "@/assets/portfoliotech.png";
+import projectCv from "@/assets/weather.png";
 
 const projects = [
 
