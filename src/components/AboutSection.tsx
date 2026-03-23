@@ -34,18 +34,13 @@ const AboutSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="text-muted-foreground leading-relaxed mb-6">
-            My journey with Python started over a year ago when I began learning how to work with APIs and collaborated with a team to build a weather application.
-             This experience strengthened my communication skills and showed me the value of collaboration when solving technical problems.
-            <p className="text-muted-foreground leading-relaxed mb-6 mt-6">
-             My interest in data started in high school when I created my first graphs in Excel using my own collected data.
-              That early curiosity eventually grew into a passion for data science and understanding how data can reveal trends and support better decision-making.
-            </p>
-               <p className="text-muted-foreground leading-relaxed">
-              In my current learning journey, I've worked on projects that involve generating dummy datasets for businesses to analyze trends and predict outcomes, as well as exploring retail sales data to help project delivery revenue for the upcoming year.
-Outside of tech, I enjoy running and meditation—habits that help me stay focused, disciplined, and attentive to detail, qualities that are just as important when working with data.
-            </p>
-            </p>
+       <p className="text-gray-100 leading-relaxed mb-6 hover:scale-105 transition-transform duration-300">
+  My data journey started in high school, literally just me, Excel, and data I'd collected myself. That curiosity stuck, and over a year ago I dove into Python, building a weather app with a team and realising how much I enjoy both the technical and collaborative sides of problem-solving.
+</p>
+
+<p className="text-gray-100 leading-relaxed hover:scale-105 transition-transform duration-300">
+  Since then I've worked on projects ranging from generating business datasets to analysing retail sales trends. Outside of tech, running and meditation keep me sharp, turns out patience and attention to detail matter just as much in data as they do on a long run.
+</p>
           </motion.div>
 
           <motion.div

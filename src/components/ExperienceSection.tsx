@@ -65,11 +65,11 @@ const ExperienceSection = () => {
                 <span className="text-xs uppercase tracking-[0.2em] font-semibold text-primary">{experience.role}</span>
               </div>
               <h3 className="font-display font-semibold text-lg text-foreground mb-1">{experience.company}</h3>
-              <div className="flex items-center gap-1 text-xs text-muted-foreground mb-3">
+              <div className="flex items-center gap-1 text-xs text-gray-100 mb-3 hover:scale-105 transition-transform duration-300">
                 <Calendar className="w-3.5 h-3.5" />
                 <span>{experience.period}</span>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">{experience.description}</p>
+              <p className="text-gray-100 text-sm leading-relaxed hover:scale-105 transition-transform duration-300">{experience.description}</p>
             </motion.div>
           ))}
         </div>

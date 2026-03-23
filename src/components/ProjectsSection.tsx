@@ -67,7 +67,7 @@ const ProjectsSection = () => {
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-display font-semibold text-foreground mb-2">{project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{project.description}</p>
+                <p className="text-gray-100 text-sm mb-4 leading-relaxed hover:scale-105 transition-transform duration-300">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span key={tag} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">

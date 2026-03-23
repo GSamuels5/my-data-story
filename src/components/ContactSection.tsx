@@ -1,7 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, Mail, User, MessageSquare } from "lucide-react";
-import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -14,16 +13,24 @@ const ContactSection = () => {
     setLoading(true);
 
     const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
     try {
-      await emailjs.sendForm(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
-        form,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
-      );
-      form.reset();
-      setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 3000);
+      const response = await fetch('https://formspree.io/f/xlgpyova', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        form.reset();
+        setSubmitted(true);
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        alert('Failed to send message. Please try again.');
+      }
     } catch (error) {
       console.error('Email send failed:', error);
       alert('Failed to send message. Please try again.');
@@ -54,27 +61,27 @@ const ContactSection = () => {
           className="glass-card p-8 space-y-5"
         >
           <div className="relative">
-            <User className="absolute left-3 top-3.5 w-4 h-4 text-muted-foreground" />
+            <User className="absolute left-3 top-3.5 w-4 h-4 text-gray-100" />
             <input
               type="text"
-              name="from_name"
+              name="name"
               placeholder="Your Name"
               required
               className="w-full bg-background/50 border border-border rounded-lg py-3 pl-10 pr-4 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
             />
           </div>
           <div className="relative">
-            <Mail className="absolute left-3 top-3.5 w-4 h-4 text-muted-foreground" />
+            <Mail className="absolute left-3 top-3.5 w-4 h-4 text-gray-100" />
             <input
               type="email"
-              name="from_email"
+              name="email"
               placeholder="Your Email"
               required
               className="w-full bg-background/50 border border-border rounded-lg py-3 pl-10 pr-4 text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/50 transition"
             />
           </div>
           <div className="relative">
-            <MessageSquare className="absolute left-3 top-3.5 w-4 h-4 text-muted-foreground" />
+            <MessageSquare className="absolute left-3 top-3.5 w-4 h-4 text-gray-100" />
             <textarea
               rows={5}
               name="message"

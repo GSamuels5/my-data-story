@@ -11,19 +11,19 @@ const Footer = () => {
           </a>
 
           <div className="flex items-center gap-5">
-            <a href="https://github.com/GSamuels5" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://github.com/GSamuels5" target="_blank" rel="noreferrer" className="text-gray-100 hover:text-primary transition-colors">
               <Github className="w-5 h-5" />
             </a>
-            <a href="https://www.linkedin.com/in/ghamzahsamuels/" target="_blank" rel="noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="https://www.linkedin.com/in/ghamzahsamuels/" target="_blank" rel="noreferrer" className="text-gray-100 hover:text-primary transition-colors">
               <Linkedin className="w-5 h-5" />
             </a>
            
-            <a href="mailto:ghamzahsamuels23@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="mailto:ghamzahsamuels23@gmail.com" className="text-gray-100 hover:text-primary transition-colors">
               <Mail className="w-5 h-5" />
             </a>
           </div>
 
-          <p className="text-muted-foreground text-sm">
+          <p className="text-gray-100 text-sm hover:scale-105 transition-transform duration-300">
             © 2026 Ghamzah Samuels. 
           </p>
         </div>
